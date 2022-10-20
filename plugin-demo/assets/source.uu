@@ -1,0 +1,6 @@
+<script>
+  export default {
+    a:1,
+    n:2
+  }
+</script>
