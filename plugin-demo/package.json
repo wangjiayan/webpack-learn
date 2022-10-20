@@ -3,6 +3,7 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
+    "tapable": "^2.2.1",
     "webpack": "^5.74.0"
   }
 }
