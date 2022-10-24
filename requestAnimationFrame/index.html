@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      task()
+      var s = 1
+      var lastTime = new Date()
+      function task(cb, time) {
+        let curTime = new Date()
+        let gap = curTime - lastTime
+        if (gap > 1000) {
+          lastTime = curTime
+          console.log(new Date(curTime))
+        }
+        window.requestAnimationFrame(task)
+      }
+    </script> -->
+    <script>
+      // 调用
+      const test = () => console.log('现在的时间', new Date())
+      myInterval(test, 1000)
+      // 定时器
+      var s = 1
+      var lastTime = new Date()
+      function myInterval(cb, time) {
+        let curTime = new Date()
+        let gap = curTime - lastTime
+        if (gap > 1000) {
+          lastTime = curTime
+          console.log(new Date(curTime))
+        }
+        window.requestAnimationFrame(myInterval)
+      }
+    </script>
+  </body>
+</html>
