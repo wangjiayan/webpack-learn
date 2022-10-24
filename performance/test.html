@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link src="test.css" rel="stylesheet"></link>
+    <script src="./test.js"></script>
+    <style>
+      .div{
+        background:red;
+        width: 100px;
+        height: 100px;
+      }
+      body{
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div"></div>
+    <div class="div"></div><div class="div"></div><div class="div"></div><div class="div"></div><div class="div"></div>
+    <img elementtiming="big-image" src="./shangpin.svg" alt="123">
+    <img elementtiming="big-image" src="./images.jpeg" alt="1213">
+  </body>
+
+  <script>
+    // window.onload=function(){
+    //   const performance = window.performance
+    // const { timing } = performance
+    // console.log(performance)
+    // const { domainLookupEnd, domainLookupStart, domLoading, domComplete } =
+    //   timing
+    // // console.log('dns解析时间', domainLookupEnd - domainLookupStart)
+    // // console.log('dom处理时间', domComplete - domLoading)
+
+    // // console.log('==',  performance.getEntries())
+    // const paint =  window.performance.getEntriesByType('paint')
+    // console.log(paint)
+    // }
+//     function performanceObserver() {
+//   let obj = {}
+//   var observer = new PerformanceObserver(list => {
+//     list.getEntries().forEach(entry => {
+//       if (entry.entryType === 'paint') {
+//         obj[entry.name] = entry.startTime
+//       } 
+//     })
+//   });
+//   observer.observe({ entryTypes: ['paint', 'navigation'] });
+//   return obj
+// }
+//     performanceObserver() 
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+      console.log(entry);
+  });
+});
+// observer.observe({ entryTypes: ["element"] });
+// observer.observe({ entryTypes: ["mark","measure"] });
+// longtask
+  observer.observe({ entryTypes: ["longtask"] });
+  // </script>
+  //   <script>
+  //     window.performance.mark('start')
+  //     console.log('before 1s')
+  //     setTimeout(()=>{
+  //       console.log('after 1s')
+  //       window.performance.mark('end')
+  //       window.performance.measure('calc','start','end')
+  //     },1000)
+  // </script>
+</html>
