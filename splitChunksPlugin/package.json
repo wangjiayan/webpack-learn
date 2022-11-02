@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "build": "webpack --config build/webpack.config.js"
+  },
+
+  "main": "index.js",
+  "sideEffects":[
+    "./src/testAsync.js",
+    "./src/sentry.js"
+  ],
+  "private": true,
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "@sentry/react": "^7.17.3",
+    "crypto-js": "^4.1.1",
+    "react": "^18.2.0",
+    "tapable": "^2.2.1",
+    "umi-request": "^1.4.0"
+  }
+}
